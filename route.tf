@@ -1,3 +1,13 @@
+/// IGW
+
+resource "aws_internet_gateway" "day3-IGW" {
+  vpc_id = aws_vpc.day3_vpc.id
+  tags = {
+    Name = "day3-IGW"
+  }
+}
+
+
 // Routing Table
 // Public Route Table
 resource "aws_route_table" "day3-public-rtb" {

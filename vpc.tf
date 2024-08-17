@@ -14,12 +14,3 @@ output "day3_vpc" {
     value = aws_vpc.day3_vpc.id 
 }
 
-/// IGW
-
-resource "aws_internet_gateway" "day3-IGW" {
-  vpc_id = aws_vpc.day3_vpc.id
-  tags = {
-    Name = "day3-IGW"
-  }
-}
-

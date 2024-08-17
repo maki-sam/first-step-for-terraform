@@ -1,7 +1,6 @@
 data "aws_availability_zones" "day3" {
   state = "available"
 }
-// resource
 
 resource "aws_subnet" "day3-public-subnet" {
   count = length(data.aws_availability_zones.day3.names)
