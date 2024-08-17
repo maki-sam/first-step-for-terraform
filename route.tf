@@ -44,14 +44,3 @@ resource "aws_route_table_association" "private-route" {
   route_table_id = aws_route_table.day3-private-rtb.id
   subnet_id = aws_subnet.day3-private-subnet[count.index].id
 }
-
-
-
-
-
-
-
-
-
-// Route Associate
-
